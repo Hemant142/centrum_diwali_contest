@@ -1,0 +1,70 @@
+.radio-option {
+  display: flex;
+  align-items: center;
+  background-color: transparent; /* Default color */
+  border-radius: 5px;
+  justify-content: space-between;
+  width: 30%;
+  padding: 8px;
+  margin: 8px 0;
+  transition: background-color 0.3s ease;
+}
+
+.radio-option:checked + label {
+  background-color: #f9d71c; /* Change background color when selected */
+  color: #000; 
+}
+
+.radio-option:hover {
+  background-color: #f9d71c; /* Hover effect */
+}
+
+.selected {
+  color: #f9d71c; /* Change text color for better contrast */
+}
+
+.previous-next {
+  background-color: #f9d71c;
+  color: #000;
+  width: 20%;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px;
+}
+
+.questionnaire {
+  max-width: 100%;
+  padding: 20px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) { /* Tablet and below */
+  .radio-option {
+    width: 100%; /* Full width on smaller screens */
+  }
+
+  .previous-next {
+    width: 100%; /* Full width for buttons */
+    padding: 12px; /* Adjust padding for buttons */
+  }
+
+  .questionnaire {
+    padding: 10px; /* Adjust padding for questionnaire */
+  }
+}
+
+@media (max-width: 480px) { /* Mobile */
+  h3 {
+    font-size: 1.5em; /* Smaller font size for headings */
+  }
+
+  p {
+    font-size: 1em; /* Adjust paragraph font size */
+  }
+
+  .previous-next {
+    padding: 8px; /* Adjust padding for buttons */
+  }
+}

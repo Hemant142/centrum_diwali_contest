@@ -1,0 +1,142 @@
+/* App container styling */
+/* App container styling */
+.app-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  min-height: 100vh; /* Changed from height to min-height */
+  color: #fff;
+  font-family: Arial, sans-serif;
+  background-size: cover; /* Keep this for background scaling */
+  background-position: center;
+  padding: 20px;
+  overflow: hidden; /* Prevent scrolling */
+  background-color: #272c3c; /* Fallback color if image doesn't load */
+}
+
+
+.header-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.right-content {
+  background-color: rgba(0, 0, 0, 0.4); /* Increased transparency */
+  padding: 20px;
+  border-radius: 10px;
+  margin: auto;
+  width: 35%; /* Increased width */
+  max-width: 600px; /* Set a max-width for larger screens */
+  text-align: center;
+}
+
+.logo {
+  background-color: rgba(0, 0, 0, 0.2); /* Increased transparency */
+  padding: 20px;
+  border-radius: 10px;
+  margin: auto;
+  max-width: 100%; /* Make the logo responsive */
+  height: auto;
+}
+
+h1, h2, h3 {
+  color: #f9d71c;
+}
+
+.form-container input, .questionnaire input {
+  margin: 10px;
+  padding: 10px;
+  width: 90%; /* Increased width for better usability */
+  border-radius: 5px;
+  border: none;
+}
+
+button {
+  background-color: #f9d71c;
+  color: #000;
+  width: 60%; /* Corrected from string to number */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px;
+}
+
+button:hover {
+  background-color: #ffc700;
+}
+
+button:disabled {
+  background-color: #ccc; /* Gray out button when disabled */
+  cursor: not-allowed; /* Change cursor style */
+}
+
+.radio-option {
+  display: block;
+  margin: 10px 0;
+}
+
+.nav-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.celebrate h2, .celebrate p {
+  margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .app-container {
+    flex-direction: column; /* Stack elements vertically on smaller screens */
+  }
+
+  .right-content {
+    width: 90%; /* Increase width for medium screens */
+  }
+
+  h1 {
+    font-size: 1.8rem; /* Adjust title font size */
+  }
+}
+
+@media (max-width: 768px) {
+  .right-content {
+    width: 90%; /* Full width for smaller tablets */
+  }
+
+  h1 {
+    font-size: 1.6rem; /* Smaller font size for tablets */
+  }
+
+  h2 {
+    font-size: 1.4rem; /* Adjust h2 font size */
+  }
+
+  button {
+    width: 70%; /* Slightly wider button on tablets */
+  }
+}
+
+@media (max-width: 480px) {
+  .right-content {
+    padding: 15px; /* Less padding for mobile */
+    width: 95%; /* Adjust width for mobile */
+  }
+
+  h1 {
+    font-size: 1.4rem; /* Smaller title font size for mobile */
+  }
+
+  h2 {
+    font-size: 1.2rem; /* Smaller subtitle font size for mobile */
+  }
+
+  button {
+    width: 80%; /* Wider button for mobile */
+  }
+} 

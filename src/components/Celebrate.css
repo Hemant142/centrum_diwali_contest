@@ -1,0 +1,75 @@
+/* Celebrate Component Styling */
+.celebrate {
+  text-align: center;
+  /* background-color: rgba(0, 0, 0, 0.8); Dark background for contrast */
+  padding: 40px; /* Padding for breathing space */
+  border-radius: 15px; /* Rounded corners for a softer look */
+  /* box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); Subtle shadow for depth */
+  max-width: 400px; /* Limit the width for better layout */
+  margin: auto; /* Center the component */
+}
+
+.celebrate h2 {
+  color: #f9d71c; /* Bright color for the main message */
+  font-size: 1.5rem; /* Increased font size for better visibility */
+  margin: 20px 0; /* Spacing around the title */
+  font-family: 'Arial', sans-serif; /* Consistent font */
+}
+
+.celebrate p {
+  font-size: 1.2rem; /* Adjusted font size */
+  color: #fff; /* White text for readability */
+  margin: 10px 0; /* Spacing around the paragraph */
+}
+
+.highlight {
+  color: #f9d71c; /* Highlight correct answers in a bright color */
+  font-weight: bold; /* Make it stand out */
+  font-size: 1.4rem; /* Slightly larger font for emphasis */
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .celebrate {
+    padding: 10px; /* Adjust padding for larger tablets/laptops */
+    max-width: 300px; /* Limit width slightly for medium screens */
+  }
+
+  .celebrate h2 {
+    font-size: 1.4rem; /* Slightly smaller font size for medium screens */
+  }
+
+  .celebrate p {
+    font-size: 1.1rem; /* Slightly smaller font size for medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .celebrate {
+    padding: 20px; /* Adjust padding for smaller tablets */
+    max-width: 80%; /* Use a larger percentage of the screen width */
+  }
+
+  .celebrate h2 {
+    font-size: 1.3rem; /* Smaller font size for tablets */
+  }
+
+  .celebrate p {
+    font-size: 1rem; /* Smaller font size for tablets */
+  }
+}
+
+@media (max-width: 480px) {
+  .celebrate {
+    padding: 15px; /* Adjust padding for mobile screens */
+    max-width: 90%; /* Use a larger percentage of the screen width */
+  }
+
+  .celebrate h2 {
+    font-size: 1.2rem; /* Smaller font size for mobile */
+  }
+
+  .celebrate p {
+    font-size: 0.9rem; /* Smaller font size for mobile */
+  }
+}
