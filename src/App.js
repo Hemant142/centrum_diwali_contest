@@ -120,14 +120,15 @@ const App = () => {
         backgroundImage: `url(${backgroundImage})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
-        
+
       }}
     >
       {!hideLeftContent && (
         <div className="left-content">
           <img src={logo} alt='logo' className="logo" />
-          <h1>Diwali Diya Contest</h1>
-          <p>Celebrate Diwali with us by participating in our quiz and winning exciting rewards!</p>
+          <h1 className="contest-title">Diwali Diya Contest</h1>
+
+          
         </div>
       )}
       <div className={`right-content ${hideLeftContent ? 'move-up' : ''}`}>

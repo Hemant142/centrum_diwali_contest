@@ -44,6 +44,29 @@
 }
 
 
+.contest-title {
+  font-size: 3rem; /* Large font size for desktops */
+  color: #f7ce00; /* Same color as before */
+  text-align: center;
+}
+
+@media (max-width: 1200px) {
+  .contest-title {
+    font-size: 2.5rem; /* Slightly smaller for medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .contest-title {
+    font-size: 2rem; /* Smaller for tablets */
+  }
+}
+
+@media (max-width: 480px) {
+  .contest-title {
+    font-size: 1.5rem; /* Adjusted for mobile screens */
+  }
+}
 
 
 
