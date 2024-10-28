@@ -11,21 +11,21 @@
 }
 
 .radio-option:checked + label {
-  background-color: #f9d71c; /* Change background color when selected */
+  background-color: #E85A4F; /* Change background color when selected */
   color: #000; 
 }
 
 .radio-option:hover {
-  background-color: #f9d71c; /* Hover effect */
+  background-color: #E85A4F; /* Hover effect */
 }
 
 .selected {
-  color: #f9d71c; /* Change text color for better contrast */
+  color: #E85A4F; /* Change text color for better contrast */
 }
 
 .previous-next {
-  background-color: #f9d71c;
-  color: #000;
+  background-color: #E85A4F;
+  color: #fff;
   width: 20%;
   padding: 10px 20px;
   border: none;

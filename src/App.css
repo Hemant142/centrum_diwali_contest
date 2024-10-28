@@ -1,19 +1,50 @@
-/* App container styling */
-/* App container styling */
+/* App.css */
+
+
 .app-container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
-  min-height: 100vh; /* Changed from height to min-height */
-  color: #fff;
+  min-height: 100vh;
+  color: #333;
   font-family: Arial, sans-serif;
-  background-size: cover; /* Keep this for background scaling */
+  background-size: cover;
   background-position: center;
   padding: 20px;
-  overflow: hidden; /* Prevent scrolling */
-  background-color: #272c3c; /* Fallback color if image doesn't load */
+  overflow: hidden;
+  background-color: #fff6f1;
 }
+
+.center-right-content {
+  justify-content: center;
+ 
+}
+
+.right-content.move-up {
+  transform: translateY(-40px); /* Adjust the value to move up by 20px */
+  transition: transform 0.2s ease;
+ 
+  width: 45%;
+}
+
+
+.left-content {
+  margin: auto;
+}
+
+.right-content {
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  border-radius: 10px;
+  width: 35%;
+  margin: auto;
+  max-width: 600px;
+  text-align: center;
+}
+
+
+
 
 
 .header-container {
@@ -23,55 +54,47 @@
   margin-bottom: 20px;
 }
 
-.right-content {
-  background-color: rgba(0, 0, 0, 0.4); /* Increased transparency */
-  padding: 20px;
-  border-radius: 10px;
-  margin: auto;
-  width: 35%; /* Increased width */
-  max-width: 600px; /* Set a max-width for larger screens */
-  text-align: center;
-}
-
 .logo {
-  background-color: rgba(0, 0, 0, 0.2); /* Increased transparency */
+  background-color: rgba(0, 0, 0, 0.2);
   padding: 20px;
   border-radius: 10px;
   margin: auto;
-  max-width: 100%; /* Make the logo responsive */
+  max-width: 100%;
   height: auto;
 }
 
 h1, h2, h3 {
-  color: #f9d71c;
+  color: #E85A4F;
 }
 
 .form-container input, .questionnaire input {
   margin: 10px;
   padding: 10px;
-  width: 90%; /* Increased width for better usability */
+  width: 90%;
   border-radius: 5px;
   border: none;
+  background-color: #fef3ea;
 }
 
 button {
-  background-color: #f9d71c;
-  color: #000;
-  width: 60%; /* Corrected from string to number */
+  background-color: #E85A4F; /* Matches the color of h1, h2, h3 tags */
+  color: #fff;
+  width: 60%;
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   margin: 10px;
+  transition: background-color 0.3s ease;
 }
 
 button:hover {
-  background-color: #ffc700;
+  background-color: #cc4a3b; /* Slightly darker shade for hover effect */
 }
 
 button:disabled {
-  background-color: #ccc; /* Gray out button when disabled */
-  cursor: not-allowed; /* Change cursor style */
+  background-color: #ccc;
+  cursor: not-allowed;
 }
 
 .radio-option {
@@ -92,51 +115,73 @@ button:disabled {
 /* Responsive Design */
 @media (max-width: 1200px) {
   .app-container {
-    flex-direction: column; /* Stack elements vertically on smaller screens */
+    flex-direction: column;
+    align-items: center;
   }
 
   .right-content {
-    width: 90%; /* Increase width for medium screens */
+    width: 80%;
+ 
   }
 
+  .right-content.move-up {
+    transform: translateY(-40px); /* Adjust the value to move up by 20px */
+    transition: transform 0.2s ease;
+    /* border: 1px solid red; */
+    width: 90%;
+  }
+  
+
   h1 {
-    font-size: 1.8rem; /* Adjust title font size */
+    font-size: 1.8rem;
   }
 }
 
 @media (max-width: 768px) {
   .right-content {
-    width: 90%; /* Full width for smaller tablets */
+ 
+    width: 90%;
+    
+   
   }
 
   h1 {
-    font-size: 1.6rem; /* Smaller font size for tablets */
+    font-size: 1.6rem;
   }
 
   h2 {
-    font-size: 1.4rem; /* Adjust h2 font size */
+    font-size: 1.4rem;
   }
 
   button {
-    width: 70%; /* Slightly wider button on tablets */
+    width: 70%;
   }
 }
 
 @media (max-width: 480px) {
+  .app-container {
+    padding: 10px;
+   
+  }
+
   .right-content {
-    padding: 15px; /* Less padding for mobile */
-    width: 95%; /* Adjust width for mobile */
+    padding: 10px;
+    width: 90%;
+  
+   
+  }
+  .right-content.move-up {
+    transform: translateY(-40px); /* Adjust the value to move up by 20px */
+    transition: transform 0.2s ease;
+   
+    width: 90%;
   }
 
-  h1 {
-    font-size: 1.4rem; /* Smaller title font size for mobile */
+  h1, h2 {
+    font-size: 1.2rem;
   }
 
-  h2 {
-    font-size: 1.2rem; /* Smaller subtitle font size for mobile */
-  }
-
-  button {
-    width: 80%; /* Wider button for mobile */
-  }
-} 
+  /* button {
+    width: 100%;
+  } */
+}

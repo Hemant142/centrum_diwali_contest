@@ -12,6 +12,9 @@ const Questionnaire = ({ step, questions, onNext, onPrev, onSubmit }) => {
     setSelectedAnswers(newAnswers);
   };
 
+  // Determine if the Next button should be disabled
+  const isNextDisabled = !selectedAnswers[step];
+
   return (
     <div className="questionnaire">
       <h3>Question {step + 1}</h3>
@@ -39,7 +42,7 @@ const Questionnaire = ({ step, questions, onNext, onPrev, onSubmit }) => {
         {isLastQuestion ? (
           <button onClick={() => onSubmit(selectedAnswers)}>Submit</button>
         ) : (
-          <button className='previous-next' onClick={onNext}>Next</button>
+          <button className='previous-next' onClick={onNext} disabled={isNextDisabled}>Next</button>
         )}
       </div>
     </div>
