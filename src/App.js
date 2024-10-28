@@ -126,7 +126,7 @@ const App = () => {
       {!hideLeftContent && (
         <div className="left-content">
           <img src={logo} alt='logo' className="logo" />
-          <h1 className="contest-title">Diwali Diya Contest</h1>
+          <h1 className="contest-title">Golden Diya Contest</h1>
 
           
         </div>
