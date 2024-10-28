@@ -14,7 +14,9 @@ const Celebrate = ({ name }) => {
       />
    
       <h2>🎉 
-      Thank you   {name}  for your participation! If shortlisted, you'll be contacted soon. 🎉</h2>
+
+      Thanks {name}for your participation, if shortlisted you'll be contacted soon.
+       🎉</h2>
       
     </div>
   );

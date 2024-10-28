@@ -24,27 +24,26 @@ const App = () => {
   const [userExists, setUserExists] = useState(false);
   const [hideLeftContent, setHideLeftContent] = useState(false);
   const [questions, setQuestions] = useState([]);
+  const [errors, setErrors] = useState({ email: '', phone: '' }); // Error state for validation
 
   const API_URL = process.env.REACT_APP_API_URL;
 
   useEffect(() => {
     const fetchQuestions = async () => {
-        try {
-            const response = await axios.get(`${API_URL}questions/`);
-            if (response.data && response.data.data) {
-                setQuestions(response.data.data); // Store the questions in state
-            } else {
-                console.error('No data found in the response');
-            }
-        } catch (error) {
-            console.error('Error fetching questions:', error);
+      try {
+        const response = await axios.get(`${API_URL}questions/`);
+        if (response.data && response.data.data) {
+          setQuestions(response.data.data); // Store the questions in state
+        } else {
+          console.error('No data found in the response');
         }
+      } catch (error) {
+        console.error('Error fetching questions:', error);
+      }
     };
 
     fetchQuestions(); // Call the fetch function
-}, []); // Empty dependency array means this runs once when the component mounts
-
-
+  }, []); // Empty dependency array means this runs once when the component mounts
 
   // Shuffle options for each question
   const shuffledQuestions = questions.map(question => ({
@@ -56,10 +55,7 @@ const App = () => {
     const checkEmail = async () => {
       try {
         const response = await axios.get(`${API_URL}users/check-email?email=${formData.email}`);
-      
-    
-    
-      console.log(response)
+        console.log(response);
         setUserExists(response.data.exists); // Set userExists based on the API response
       } catch (error) {
         console.log("Error checking email:", error);
@@ -72,6 +68,26 @@ const App = () => {
   }, [formData.email]);
 
   const handleNext = () => {
+    const newErrors = { email: '', phone: '' };
+
+    // Validate email format
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(formData.email)) {
+      newErrors.email = 'Please enter a valid email address';
+    }
+
+    // Validate phone number length
+    if (formData.phone.length !== 10) {
+      newErrors.phone = 'Phone number must be exactly 10 digits';
+    }
+
+    // Check if there are any errors
+    if (newErrors.email || newErrors.phone) {
+      setErrors(newErrors); // Set errors if validation fails
+      return; // Prevent moving to the next step
+    }
+
+    setErrors({ email: '', phone: '' }); // Clear errors if validation passes
     setStep((prev) => prev + 1);
     if (step === 0) {
       setHideLeftContent(true); // Hide the left content when "Start" button is clicked
@@ -99,7 +115,6 @@ const App = () => {
       instagram: formData.instagram,
       score: correctAnswers,
     };
-    
 
     try {
       await axios.post(`${API_URL}users/adduser`, userData);
@@ -120,15 +135,12 @@ const App = () => {
         backgroundImage: `url(${backgroundImage})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
-
       }}
     >
       {!hideLeftContent && (
         <div className="left-content">
           <img src={logo} alt='logo' className="logo" />
           <h1 className="contest-title">Golden Diya Contest</h1>
-
-          
         </div>
       )}
       <div className={`right-content ${hideLeftContent ? 'move-up' : ''}`}>
@@ -139,7 +151,9 @@ const App = () => {
               <form>
                 <input type="text" name="name" placeholder="Name" required value={formData.name} onChange={handleChange} />
                 <input type="email" name="email" placeholder="Email" required value={formData.email} onChange={handleChange} />
+                {errors.email && <p style={{ color: '#D90429' }}>{errors.email}</p>}
                 <input type="tel" name="phone" placeholder="Phone Number" required value={formData.phone} onChange={handleChange} />
+                {errors.phone && <p style={{ color: '#D90429' }}>{errors.phone}</p>}
                 <input type="text" name="instagram" placeholder="Instagram Handle" required value={formData.instagram} onChange={handleChange} />
                 <button type="button" onClick={handleNext} disabled={!formData.name || !formData.email || !formData.phone || !formData.instagram || userExists}>
                   Start

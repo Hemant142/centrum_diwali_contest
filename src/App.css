@@ -45,8 +45,8 @@
 
 
 .contest-title {
-  font-size: 3rem; /* Large font size for desktops */
-  color: #f7ce00; /* Same color as before */
+  font-size: 4rem; /* Increase to a larger size for desktops */
+  color: #f7ce00;
   text-align: center;
 }
 
@@ -133,9 +133,9 @@ button:disabled {
   }
 
   .contest-title {
-    font-size: 2.5rem; /* Slightly smaller for medium screens */
+    font-size: 3.5rem; /* Slightly smaller for medium screens */
   }
-  
+
   .right-content.move-up {
     transform: translateY(-40px); /* Adjust the value to move up by 20px */
     transition: transform 0.2s ease;
@@ -157,7 +157,7 @@ button:disabled {
    
   }
   .contest-title {
-    font-size: 2rem; /* Smaller for tablets */
+    font-size: 3rem; /* Smaller for tablets */
   }
   h1 {
     font-size: 1.6rem;
@@ -174,20 +174,39 @@ button:disabled {
 
 @media (max-width: 480px) {
   .app-container {
+    flex-direction: column;
+    align-items: center;
     padding: 10px;
-   
+  }
+
+  .left-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .logo {
+    max-width: 60%; /* Adjust the size for mobile screens */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 10px; /* Space between the logo and title */
+  }
+
+  .contest-title {
+    font-size: 2.5rem; /* Adjusted for mobile screens */
+    text-align: center;
   }
 
   .right-content {
     padding: 10px;
     width: 90%;
-  
-   
   }
 
 
+
   .contest-title {
-    font-size: 1.5rem; /* Adjusted for mobile screens */
+
+    font-size: 2.5rem; /* Adjusted for mobile screens */
   }
 
 
