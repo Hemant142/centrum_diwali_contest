@@ -120,6 +120,7 @@ const App = () => {
         backgroundImage: `url(${backgroundImage})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
+        
       }}
     >
       {!hideLeftContent && (
