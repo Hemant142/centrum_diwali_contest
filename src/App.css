@@ -7,7 +7,7 @@
   justify-content: space-between;
   align-items: flex-start;
   min-height: 100vh;
-  color: #333;
+  color: #fff;
   font-family: Arial, sans-serif;
   background-size: cover;
   background-position: center;
@@ -64,7 +64,7 @@
 }
 
 h1, h2, h3 {
-  color: #E85A4F;
+  color: #f7ce00;
 }
 
 .form-container input, .questionnaire input {
@@ -77,7 +77,7 @@ h1, h2, h3 {
 }
 
 button {
-  background-color: #E85A4F; /* Matches the color of h1, h2, h3 tags */
+  background-color: #f7ce00; /* Matches the color of h1, h2, h3 tags */
   color: #fff;
   width: 60%;
   padding: 10px 20px;
@@ -89,7 +89,7 @@ button {
 }
 
 button:hover {
-  background-color: #cc4a3b; /* Slightly darker shade for hover effect */
+  background-color: #f7ce00; /* Slightly darker shade for hover effect */
 }
 
 button:disabled {

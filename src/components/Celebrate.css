@@ -11,14 +11,14 @@
 }
 
 .diwali-message {
-  color: #E85A4F; /* Bright color for the main message */
+  color: #f7ce00; /* Bright color for the main message */
   font-size: 1.5rem; /* Increased font size for better visibility */
   margin: 10px 0; /* Spacing around the title */
   font-family: 'Arial', sans-serif; /* Consistent font */
 }
 
 .celebrate h2 {
-  color: #E85A4F; /* Bright color for the message */
+  color: #f7ce00; /* Bright color for the message */
   font-size: 1.5rem; /* Increased font size for better visibility */
   margin: 10px 0; /* Spacing around the title */
   font-family: 'Arial', sans-serif; /* Consistent font */
