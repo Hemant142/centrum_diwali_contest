@@ -1,6 +1,5 @@
 /* App.css */
 
-
 .app-container {
   display: flex;
   flex-direction: row;
@@ -18,16 +17,13 @@
 
 .center-right-content {
   justify-content: center;
- 
 }
 
 .right-content.move-up {
-  transform: translateY(-40px); /* Adjust the value to move up by 20px */
+  transform: translateY(-40px);
   transition: transform 0.2s ease;
- 
   width: 45%;
 }
-
 
 .left-content {
   margin: auto;
@@ -43,17 +39,11 @@
   text-align: center;
 }
 
-
 .contest-title {
-  font-size: 4rem; /* Increase to a larger size for desktops */
+  font-size: 4rem;
   color: #f7ce00;
   text-align: center;
 }
-
-
-
-
-
 
 .header-container {
   display: flex;
@@ -85,7 +75,7 @@ h1, h2, h3 {
 }
 
 button {
-  background-color: #f7ce00; /* Matches the color of h1, h2, h3 tags */
+  background-color: #f7ce00;
   color: #fff;
   width: 60%;
   padding: 10px 20px;
@@ -97,7 +87,7 @@ button {
 }
 
 button:hover {
-  background-color: #f7ce00; /* Slightly darker shade for hover effect */
+  background-color: #f7ce00;
 }
 
 button:disabled {
@@ -129,20 +119,17 @@ button:disabled {
 
   .right-content {
     width: 80%;
- 
   }
 
   .contest-title {
-    font-size: 3.5rem; /* Slightly smaller for medium screens */
+    font-size: 3.5rem;
   }
 
   .right-content.move-up {
-    transform: translateY(-40px); /* Adjust the value to move up by 20px */
+    transform: translateY(-40px);
     transition: transform 0.2s ease;
-    /* border: 1px solid red; */
     width: 90%;
   }
-  
 
   h1 {
     font-size: 1.8rem;
@@ -151,13 +138,10 @@ button:disabled {
 
 @media (max-width: 768px) {
   .right-content {
- 
     width: 90%;
-    
-   
   }
   .contest-title {
-    font-size: 3rem; /* Smaller for tablets */
+    font-size: 3rem;
   }
   h1 {
     font-size: 1.6rem;
@@ -187,13 +171,13 @@ button:disabled {
   }
 
   .logo {
-    max-width: 60%; /* Adjust the size for mobile screens */
-    height: auto; /* Maintain aspect ratio */
-    margin-bottom: 10px; /* Space between the logo and title */
+    max-width: 60%;
+    height: auto;
+    margin-bottom: 10px;
   }
 
   .contest-title {
-    font-size: 2.5rem; /* Adjusted for mobile screens */
+    font-size: 2.5rem;
     text-align: center;
   }
 
@@ -202,18 +186,13 @@ button:disabled {
     width: 90%;
   }
 
-
-
   .contest-title {
-
-    font-size: 2.5rem; /* Adjusted for mobile screens */
+    font-size: 2.5rem;
   }
 
-
   .right-content.move-up {
-    transform: translateY(-40px); /* Adjust the value to move up by 20px */
+    transform: translateY(-40px);
     transition: transform 0.2s ease;
-   
     width: 90%;
   }
 
@@ -221,7 +200,13 @@ button:disabled {
     font-size: 1.2rem;
   }
 
-  /* button {
-    width: 100%;
-  } */
+  .form-container input, .questionnaire input {
+    padding: 8px;
+    width: 85%;
+    font-size: 0.9rem;
+  }
+
+  button {
+    width: 80%;
+  }
 }
